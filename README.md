@@ -1,0 +1,1 @@
+A Digital Portfolio is a personal website that displays an individual’sskills, education, projects, and achievementsin a well-organized and attractive format.It is designed using HTML, CSS, and optionally JavaScript to create a simple and responsive layout.
