@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: #00aaff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #001f33;
+      padding: 15px 20px;
+      text-align: center;
+     
+    }
+    img{
+        width:150px;
+        height:150px;
+        object-fit:cover;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00ccff;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #00aaff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+   
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 1px solid #004466;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #00ccff;
+      margin-bottom: 20px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #002b40;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #00ccff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #00aaff;
+      border-radius: 5px;
+      background: #001f33;
+      color: white;
+    }
+
+    input[type="submit"] {
+      background: #00aaff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: white;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #001f33;
+      color: #00aaff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <img src="https://i.supaimg.com/0d0c98b4-d4e4-404f-9f9d-99b5cbf13e0c.jpg">
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am M.A.Indupriya I graduate student of BCA at Government arts college</p>
+  </section>
+  
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Ms office</div>
+      <div class="skill">Tally    </div>
+      <div class="skill">Python</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Computer Application</strong> – Annalamai university </p>
+    <p><strong>High School</stron>government model High school B.Mutlur (2022-2024))</p>
+  </section>
+
+  <section id="contact">
+      <h2>Contact me</h2>
+      <p>maindupriya@gmail.com</p>
+      <p>parangipettai, Cuddalore district</p>
+      <p>Tamilnadu</p>
+      <p>👇</p>
+   
+    <form onsubmit="return sendMessage()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
+
+      if (name && email && message) {
+        alert("Thank you " + name + "! Your message has been sent.");
+      } else {
+        alert("Please fill all fields.");
+      }
+      return false; // Prevents actual form submission
+    }
+  </script>
+
+</body>
+</html>
